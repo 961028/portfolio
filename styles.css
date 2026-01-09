@@ -17,7 +17,6 @@ html {
   /* Line Heights */
   --lh-body: 1.5;
   --lh-small: 1.4;
-  --lh-heading: 1.25;
   --lh-display: 1.15;
   
   /* Spacing Scale */
@@ -26,6 +25,7 @@ html {
   --space-md: 1.5rem;
   --space-lg: 2.5rem;
   --space-xl: 4rem;
+  --space-2xl: 8rem;
   
   /* Content Width */
   --content-width-base: 60ch;
@@ -76,10 +76,20 @@ h1 {
   line-height: var(--lh-display);
 }
 
+.flow > ul,
+.flow > ol {
+  padding-left: var(--space-md);
+  line-height: var(--lh-body);
+}
+
 .flow {
   max-width: var(--content-width-base);
   margin: var(--space-xl) auto;
   padding: var(--space-lg);
+}
+
+.title {
+  text-indent: -0.05em;
 }
 
 /* Reset intrinsic margins */
@@ -112,22 +122,26 @@ a:active {
   color: var(--color-link);
 }
 
-img {
+.flow > img {
   width: var(--content-width-wide);
   max-width: calc(100vw - var(--space-sm) * 2);
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  margin-top: var(--space-xl);
-  margin-bottom: var(--space-xl);
+  margin-top: var(--space-lg);
   display: block;
   height: auto;
   border-radius: var(--radius-md);
   border: var(--border-thin);
 }
 
+.flow .hero {
+  margin-top: 0;
+}
+
 .image-description {
   text-align: center;
   opacity: var(--opacity-muted);
-  margin-top: calc(var(--space-xl) * -0.5);
+  margin-top: var(--space-md);
+  display: block;
 }
