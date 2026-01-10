@@ -38,7 +38,7 @@ html {
   --color-background: #fafafa;
   --color-text: #242424;
   --color-border: #ddd;
-  --color-link: #1a4fd8;
+  --color-link: rgb(42, 69, 210);
   
   /* Borders */
   --border-thin: 1px solid var(--color-border);
