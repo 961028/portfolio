@@ -47,6 +47,10 @@ html {
   --opacity-muted: 0.6;
 }
 
+.title {
+  text-indent: -0.05em;
+}
+
 /* Body sets defaults only - no layout */
 body {
   background-color: var(--color-background);
@@ -76,20 +80,10 @@ h1 {
   line-height: var(--lh-display);
 }
 
-.flow > ul,
-.flow > ol {
-  padding-left: var(--space-md);
-  line-height: var(--lh-body);
-}
-
 .flow {
   max-width: var(--content-width-base);
   margin: var(--space-xl) auto;
   padding: var(--space-lg);
-}
-
-.title {
-  text-indent: -0.05em;
 }
 
 /* Reset intrinsic margins */
@@ -113,6 +107,12 @@ h1 {
 .flow > h2,
 .flow > h3 {
   margin-top: var(--space-md);
+}
+
+/* Lists */
+.flow > ul {
+  padding-left: var(--space-md);
+  line-height: var(--lh-body);
 }
 
 a,
