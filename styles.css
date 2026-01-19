@@ -127,7 +127,8 @@ a:hover {
   text-decoration: none;
 }
 
-.flow > img {
+/* Image frame wrapper for screen-blended border */
+.flow .image-frame {
   width: var(--content-width-wide);
   max-width: calc(100vw - var(--space-sm) * 2);
   position: relative;
@@ -135,13 +136,32 @@ a:hover {
   transform: translateX(-50%);
   margin-top: var(--space-lg);
   display: block;
-  height: auto;
   border-radius: var(--radius-md);
-  border: var(--border-thin);
 }
 
-.flow .hero {
+/* Hero image: remove top margin on its frame */
+.flow .image-frame.hero {
   margin-top: 0;
+}
+
+/* Image inside the frame */
+.flow .image-frame > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: inherit;
+  border: none;
+}
+
+/* Screen-blended border effect */
+.flow .image-frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid #ffffff64;
+  mix-blend-mode: screen;
+  pointer-events: none;
 }
 
 .image-description {
