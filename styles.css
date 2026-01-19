@@ -36,7 +36,7 @@ html {
   --radius-md: 2rem;
   
   /* Colors */
-  --color-background: #fefbf4;
+  --color-background: #fffdfa;
   --color-text: #242424;
   --color-border: #ddd;
   --color-link: #2424aa;
@@ -161,8 +161,8 @@ a:hover {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  border: 1px solid #ffffff64;
-  mix-blend-mode: screen;
+  border: 1px solid #ffffff42;
+  mix-blend-mode: plus-lighter;
   pointer-events: none;
 }
 
