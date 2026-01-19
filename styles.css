@@ -1,5 +1,6 @@
 html {
   font-size: clamp(16px, 0.5vw + 0.875rem, 18px);
+  cursor: url('cursor/default.png') 0 0, auto;
 }
 
 :root {
@@ -58,7 +59,6 @@ body {
   font-family: var(--font-family-base);
   text-wrap: pretty;
   margin: 0;
-  cursor: url('cursor/default.png') 0 0, auto;
 }
 
 small {
