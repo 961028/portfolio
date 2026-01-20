@@ -65,35 +65,6 @@
         const img = new Image();
         img.src = src;
       });
-
-      const logo = document.querySelector('.eh-logo');
-      if (logo) {
-        let themeLocked = false;
-
-        logo.addEventListener('mouseenter', function() {
-          if (themeLocked) {
-            document.body.classList.remove('alt-theme');
-          } else {
-            document.body.classList.add('alt-theme');
-          }
-        });
-        logo.addEventListener('mouseleave', function() {
-          if (themeLocked) {
-            document.body.classList.add('alt-theme');
-          } else {
-            document.body.classList.remove('alt-theme');
-          }
-        });
-
-        logo.addEventListener('click', function() {
-          themeLocked = !themeLocked;
-          if (themeLocked) {
-            document.body.classList.add('alt-theme');
-          } else {
-            document.body.classList.remove('alt-theme');
-          }
-        });
-      }
     });
   </script>
 </body>
