@@ -39,7 +39,13 @@ html {
   --color-background: #F7F4EC;
   --color-text: #252523;
   --color-link: #2149B5;
-  --color-shadow: #25252342
+  --color-shadow: #25252342;
+  
+  /* Alternate Theme Colors */
+  --color-background-alt: #2149B5;
+  --color-text-alt: #F7F4EC;
+  --color-link-alt: #F7F4EC;
+  --color-shadow-alt: #25252342;
   
   /* Opacity */
   --opacity-muted: 0.6;
@@ -59,6 +65,15 @@ body {
   font-family: var(--font-family-base);
   text-wrap: pretty;
   margin: 0;
+}
+
+body:has(.eh-logo:hover) {
+  --color-background: var(--color-background-alt);
+  --color-text: var(--color-text-alt);
+  --color-link: var(--color-link-alt);
+  --color-shadow: var(--color-shadow-alt);
+  background-color: var(--color-background);
+  color: var(--color-text);
 }
 
 small {
