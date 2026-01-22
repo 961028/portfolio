@@ -9,70 +9,98 @@
 <body>
   <div class="flow">
     <div class="image-frame hero">
-      <img src="temp-images/Start.png" alt="Solace Care project hero image" loading="lazy">
+      <img src="images-solace-care/checklist-partially-open.png" alt="Solace Care project hero image" loading="lazy">
     </div>
 
     <h1>Solace Care Redesign</h1>
 
     <p>
     Solace Care is a planning and coordination tool for people who have recently lost a close relative.
-    This redesign focuses on reducing complexity, improving clarity, and supporting emotionally sensitive users through calmer interaction patterns.
+    This redesign focuses on reducing complexity, improving clarity, and supporting emotionally sensitive users through calm interaction patterns.
     </p>
 
     <h2>Design goals</h2>
 
     <p>
-    The project is guided by four core principles: clear and predictable navigation, low cognitive load,
-    context-aware AI integration, and efficient collaboration between multiple users.
+    The project is guided by three core principles: low cognitive load,
+    context-aware AI integration, and simple collaboration.
     </p>
 
     <div class="image-frame">
-      <img src="temp-images/solace-care-original-website.png" alt="Solace Care original website layout" loading="lazy">
+      <img src="images-solace-care/original-solace-care-startpage.png" alt="Original Solace Care start page with complex navigation" loading="lazy">
     </div>
-    <small class="image-description">Original website layout, highlighting navigation and content issues.</small>
+    <small class="image-description">Original Solace Care start page.</small>
 
     <h2>Problems with the existing product</h2>
 
     <p>
-    The current interface is visually cluttered and difficult to navigate.
+    The current interface is visually cluttered and resulting in a high cognitive load.
     Although the platform aims to support AI assistance and collaborative planning,
-    both features are poorly integrated and provide limited practical value.
+    both features are poorly integrated.
     </p>
 
     <div class="image-frame">
-      <img src="temp-images/solace-assistant-view.png" alt="New startpage" loading="lazy">
+      <img src="images-solace-care/original-solace-care-assistant.png" alt="Original Solace Care assistant view separated from main content" loading="lazy">
     </div>
+    <small class="image-description">Original Solace Care assistant, shown in a separate view with limited awareness of the user's current task.</small>
 
     <p>
     The existing AI solution lacks contextual awareness.
     Since it cannot see what the user is currently viewing, users are forced to manually explain their situation
-    instead of asking simple, relevant questions. This increases friction and cognitive effort.
+    instead of directly asking relevant questions. This increases friction and cognitive effort.
     </p>
 
     <div class="image-frame">
-      <img src="temp-images/Start-1.png" alt="New startpage" loading="lazy">
+      <img src="images-solace-care/checklist-open.png" alt="Redesigned checklist expanded view." loading="lazy">
     </div>
-    <small class="image-description">
-        Inside each checkbox-item is a text-guide, collaboration tools, and context aware AI.
-    </small>
+    <small class="image-description">New checklist view with expanded sections and a clearer hierarchy of tasks.</small>
 
     <h2>Design approach</h2>
 
     <p>
-    To address this, the AI assistant has been integrated as a persistent chat panel across all pages
-    instead of being isolated on a separate view or hidden behind a floating action button.
-    This allows the AI to respond based on the user's current context and active workflow.
-    </p>
-
-    <p>
-    A shared notes panel has also been added to every page to support collaboration directly within the planning process.
-    Co-planners can leave and access relevant information exactly where it is needed,
-    rather than relying on external tools or disconnected views.
+    The redesigned checklist keeps the original timeline structure but introduces a new section dedicated to the very first days after a loss.
+    By separating these immediate tasks from those that come in the following weeks, it helps users focus on what needs attention right now without being overwhelmed by everything that needs to be done in the following weeks.
+    In addition, toggles for hiding checked items and tasks assigned to others have been added.
     </p>
 
     <div class="image-frame">
-      <img src="temp-images/Start-2.png" alt="Redesigned Solace Care interface example" loading="lazy">
+      <img src="images-solace-care/original-solace-care-checklist.png" alt="Original Solace Care checklist with dense layout" loading="lazy">
     </div>
+    <small class="image-description">Original checklist.</small>
+
+    <div class="image-frame">
+      <img src="images-solace-care/original-solace-care-checklistitem-page.png" alt="Original Solace Care checklist item page" loading="lazy">
+    </div>
+    <small class="image-description">Original checklist item page.</small>
+
+    <div class="image-frame">
+      <img src="images-solace-care/checklistitem-page.png" alt="Redesigned checklist item view with guidance, collaboration and AI support" loading="lazy">
+    </div>
+    <small class="image-description">
+        Redesigned checklist item page, combining guidance text, shared notes, and a context-aware AI assistant.
+    </small>
+
+    <p>
+    A shared notes panel has been added to every checklist item page to support collaboration directly within the planning process.
+    Co-planners can leave a note where it is most relevant,
+    rather than relying on external tools.
+    </p>
+
+    <div class="image-frame">
+      <img src="images-solace-care/checklistitem-page-with-ai-message.png" alt="Checklist item page showing an AI message responding to the current context" loading="lazy">
+    </div>
+    <small class="image-description">AI-assisted workflow example, where the assistant responds directly to the active context.</small>
+
+    <p>
+    The AI assistant has been integrated as a persistent chat panel across all pages
+    instead of being isolated on a separate view or hidden behind a floating action button.
+    This allows the AI to respond based on the user's current context directly in their active workflow.
+    </p>
+
+    <div class="image-frame">
+      <img src="images-solace-care/library.png" alt="Redesigned Solace Care library view with articles" loading="lazy">
+    </div>
+    <small class="image-description">Redesigned Solace Care library view where articles live.</small>
 
     <p>
     The overall interface has been reduced to core functionality only.
@@ -81,20 +109,14 @@
     </p>
 
     <div class="image-frame">
-      <img src="temp-images/Start-5.png" alt="New checklist, expanded" loading="lazy">
+      <img src="images-solace-care/original-solace-care-library.png" alt="Original Solace Care library view where articles live" loading="lazy">
     </div>
+    <small class="image-description">Original library view where articles live.</small>
 
     <div class="image-frame">
-      <img src="temp-images/solace-care-checklist.png" alt="Original checklist" loading="lazy">
+      <img src="images-solace-care/documents.png" alt="Redesigned documents view with calmer layout and integrated assistant" loading="lazy">
     </div>
-
-    <div class="image-frame">
-      <img src="temp-images/Start-3.png" alt="Solace Care AI-assisted workflow example" loading="lazy">
-    </div>
-
-    <div class="image-frame">
-      <img src="temp-images/Start-4.png" alt="Additional Solace Care interface screen" loading="lazy">
-    </div>
+    <small class="image-description">Redesigned documents page, showing an organised file listand an expanding search bar icon.</small>
 
     <p><a href="index.html">Back to projects</a></p>
   </div>
