@@ -143,6 +143,11 @@ h1 {
   margin-top: var(--space-md);
 }
 
+/* Extra space between image-description and next element */
+.flow .image-description + * {
+  margin-top: var(--space-md);
+}
+
 /* Lists */
 .flow > ul {
   padding-left: var(--space-md);
