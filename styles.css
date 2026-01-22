@@ -67,7 +67,7 @@ body {
   margin: 0;
 }
 
-body:has(.eh-logo:hover) {
+body.theme-alt {
   --color-background: var(--color-background-alt);
   --color-text: var(--color-text-alt);
   --color-link: var(--color-link-alt);

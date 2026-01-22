@@ -104,6 +104,25 @@
   </div>
 
   <script>
+    // Logo hover theme toggle
+    window.addEventListener('DOMContentLoaded', function() {
+      const logo = document.querySelector('.eh-logo');
+      if (!logo) return;
+
+      const body = document.body;
+
+      function enableAltTheme() {
+        body.classList.add('theme-alt');
+      }
+
+      function disableAltTheme() {
+        body.classList.remove('theme-alt');
+      }
+
+      logo.addEventListener('mouseenter', enableAltTheme);
+      logo.addEventListener('mouseleave', disableAltTheme);
+    });
+
     // Preload images after page load
     window.addEventListener('load', function() {
       const imagesToPreload = [
