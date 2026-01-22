@@ -1,6 +1,7 @@
 html {
   font-size: clamp(16px, 0.5vw + 0.875rem, 18px);
-  cursor: url('cursor/default.png') 0 0, auto;
+  cursor: url('cursor/default@1x.svg') 0 0, default;
+  cursor: -webkit-image-set(url('cursor/default@2x.svg') 2x) 0 0, default;
 }
 
 :root {
@@ -158,7 +159,8 @@ a,
 a:visited,
 a:active {
   color: var(--color-link);
-  cursor: url('cursor/clickable.png') 0 0, pointer;
+  cursor: url('cursor/pointer@1x.svg') 6 0, pointer;
+  cursor: -webkit-image-set(url('cursor/pointer@2x.svg') 2x) 6 0, pointer;
 }
 
 a:hover {
