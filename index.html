@@ -67,6 +67,10 @@
 
     <h2>Recent Projects</h2>
     <p>
+      <a href="solace-care.html">Solace Care Redesign</a><br>
+      Planning and coordination tool for emotionally sensitive situations, focused on clarity and low cognitive load.
+    </p>
+    <p>
       <a href="apotekhjartat.html">Apotek Hjärtat Mini</a><br>
       Concept exploring how physical presence can drive digital self-care behavior.
     </p>
@@ -127,6 +131,19 @@
       ];
 
       imagesToPreload.forEach(function(src) {
+        const img = new Image();
+        img.src = src;
+      });
+
+      const solaceImagesToPreload = [
+        'temp-images/Start.png',
+        'temp-images/Start-1.png',
+        'temp-images/Start-2.png',
+        'temp-images/Start-3.png',
+        'temp-images/Start-4.png'
+      ];
+
+      solaceImagesToPreload.forEach(function(src) {
         const img = new Image();
         img.src = src;
       });
