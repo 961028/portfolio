@@ -122,35 +122,35 @@ h1 {
 }
 
 /* Reset intrinsic margins */
-.flow>* {
+.flow > * {
   margin: 0;
 }
 
 /* Vertical rhythm to change all spacing */
-.flow>*+* {
+.flow > * + * {
   margin-top: var(--space-sm);
 }
 
 /* Tighter spacing after headings */
-.flow h1+p,
-.flow h2+p {
+.flow h1 + p,
+.flow h2 + p {
   margin-top: var(--space-xs);
 }
 
 /* Extra space before major headings */
-.flow>h1,
-.flow>h2,
-.flow>h3 {
+.flow > h1,
+.flow > h2,
+.flow > h3 {
   margin-top: var(--space-md);
 }
 
 /* Extra space between image-description and next element */
-.flow .image-description+* {
+.flow .image-description + * {
   margin-top: var(--space-md);
 }
 
 /* Lists */
-.flow>ul {
+.flow > ul {
   padding-left: var(--space-md);
   line-height: var(--lh-body);
 }
@@ -180,6 +180,21 @@ a:hover {
   display: block;
   border-radius: var(--radius-md);
   box-shadow: 0 0 1px var(--color-shadow);
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.3s;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 /* Hero image: remove top margin on its frame */
@@ -188,7 +203,7 @@ a:hover {
 }
 
 /* Image inside the frame */
-.flow .image-frame>img {
+.flow .image-frame > img {
   display: block;
   width: 100%;
   height: auto;
