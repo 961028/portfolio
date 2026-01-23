@@ -22,8 +22,8 @@ html {
   --lh-display: 1.15;
 
   /* Spacing Scale */
-  --space-xs: 1rem;
-  --space-sm: 0.75rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1.0rem;
   --space-md: 1.5rem;
   --space-lg: 2.5rem;
   --space-xl: 4rem;
@@ -55,26 +55,14 @@ html {
   --logo-size: 2.5rem;
 }
 
-.title {
-  text-indent: -0.05em;
-}
-
 /* Body sets defaults only - no layout */
 body {
   background-color: var(--color-background);
   color: var(--color-text);
   font-family: var(--font-family-base);
-  text-wrap: pretty;
+  text-wrap: balance;
+  font-weight: 370;
   margin: 0;
-}
-
-body.theme-alt {
-  --color-background: var(--color-background-alt);
-  --color-text: var(--color-text-alt);
-  --color-link: var(--color-link-alt);
-  --color-shadow: var(--color-shadow-alt);
-  background-color: var(--color-background);
-  color: var(--color-text);
 }
 
 small {
@@ -85,40 +73,26 @@ small {
 p {
   font-size: var(--step-0);
   line-height: var(--lh-body);
+  text-wrap: wrap;
+  text-wrap-style: pretty;
 }
 
 h2 {
   font-size: var(--step-1);
   line-height: var(--lh-display);
+  font-weight: 700;
 }
 
 h1 {
   font-size: var(--step-2);
   line-height: var(--lh-display);
+  font-weight: 700;
 }
 
 .flow {
   max-width: var(--content-width-base);
   margin: var(--space-xl) auto;
   padding: var(--space-lg);
-}
-
-.eh-logo {
-  display: block;
-  width: var(--logo-size);
-  height: auto;
-  position: fixed;
-  top: var(--space-sm);
-  left: var(--space-sm);
-  z-index: 10;
-}
-
-.eh-logo .logo-dark {
-  fill: var(--color-link);
-}
-
-.eh-logo .logo-light {
-  fill: var(--color-background);
 }
 
 /* Reset intrinsic margins */
@@ -131,12 +105,6 @@ h1 {
   margin-top: var(--space-sm);
 }
 
-/* Tighter spacing after headings */
-.flow h1 + p,
-.flow h2 + p {
-  margin-top: var(--space-xs);
-}
-
 /* Extra space before major headings */
 .flow > h1,
 .flow > h2,
@@ -146,7 +114,7 @@ h1 {
 
 /* Extra space between image-description and next element */
 .flow .image-description + * {
-  margin-top: var(--space-md);
+  margin-top: var(--space-lg);
 }
 
 /* Lists */
@@ -167,6 +135,18 @@ a:hover {
   background-color: var(--color-link);
   color: var(--color-background);
   text-decoration: none;
+}
+
+.main-title {
+  text-indent: -0.05em;
+}
+
+h2.main-subtitle {
+  text-indent: -0.01em;
+  margin-top: var(--space-xs);
+  font-weight: 700;
+  font-size: var(--step-0);
+  line-height: var(--lh-body);
 }
 
 /* Image frame wrapper for screen-blended border */
@@ -222,15 +202,64 @@ a:hover {
   pointer-events: none;
 }
 
+.eh-logo {
+  display: block;
+  width: var(--logo-size);
+  height: auto;
+  position: fixed;
+  top: var(--space-sm);
+  left: var(--space-sm);
+  z-index: 10;
+}
+
+.eh-logo .logo-dark {
+  fill: var(--color-link);
+}
+
+.eh-logo .logo-light {
+  fill: var(--color-background);
+}
+
 .image-description {
   text-align: center;
   opacity: var(--opacity-muted);
   margin-top: var(--space-md);
   display: block;
-  text-wrap: balance;
 }
 
 .back-link {
   margin-top: var(--space-lg);
   text-align: center;
+}
+
+@view-transition {
+  navigation: auto;
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+::view-transition-old(project-title) {
+  animation: fade-out 2s ease-in-out both;
+}
+
+::view-transition-new(project-title) {
+  animation: fade-in 2s ease-in-out both;
 }
