@@ -123,7 +123,9 @@ h1 {
 }
 
 /* Lists */
-.flow > ul {
+.flow > ul,
+.flow > ol,
+.flow > dl {
 	padding-left: var(--space-md);
 	line-height: var(--lh-body);
 }
