@@ -151,11 +151,10 @@ a:active {
 }
 
 #main-title {
-	text-indent: -0.05em;
+	text-indent: -0.03rem;
 }
 
 #main-subtitle {
-	text-indent: -0.01em;
 	margin-top: 0;
 	font-weight: 500;
 	font-size: var(--step-0);
