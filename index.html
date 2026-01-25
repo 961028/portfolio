@@ -371,6 +371,12 @@
 		</div>
 
 		<script>
+			window.addEventListener("pageshow", (e) => {
+				document
+					.querySelectorAll("a.project-title.is-transitioning")
+					.forEach((el) => el.classList.remove("is-transitioning"));
+			});
+
 			document.addEventListener("click", (e) => {
 				const link = e.target.closest("a");
 				if (!link) return;
