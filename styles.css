@@ -109,6 +109,15 @@ h1 {
 	margin-top: var(--space-xs);
 }
 
+/* Tighten space in lists */
+.flow > ul,
+.flow > ol,
+.flow > dl {
+	margin-top: var(--space-xs);
+	padding-left: var(--space-md);
+	line-height: var(--lh-body);
+}
+
 /* Extra space before headings */
 .flow > h1,
 .flow > h2,
@@ -119,14 +128,6 @@ h1 {
 /* Extra space between image-description and next element */
 .flow .image-description + * {
 	margin-top: var(--space-lg);
-}
-
-/* Lists */
-.flow > ul,
-.flow > ol,
-.flow > dl {
-	padding-left: var(--space-md);
-	line-height: var(--lh-body);
 }
 
 a,
