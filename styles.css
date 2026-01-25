@@ -31,7 +31,6 @@ html {
 	--space-md: 1.5rem;
 	--space-lg: 2.5rem;
 	--space-xl: 4rem;
-	--space-2xl: 8rem;
 
 	/* Content Width */
 	--content-width-base: 40ch;
@@ -83,7 +82,7 @@ h2 {
 
 h1 {
 	font-size: var(--step-2);
-	line-height: var(--lh-body);
+	line-height: var(--lh-display);
 	font-weight: 700;
 }
 
@@ -150,18 +149,6 @@ a:active {
 	text-decoration: none;
 }
 
-#main-title {
-	text-indent: -0.055rem;
-}
-
-#main-subtitle {
-	text-indent: -0.03rem;
-	margin-top: 0;
-	font-weight: 500;
-	font-size: var(--step-0);
-	line-height: var(--lh-body);
-}
-
 /* Image frame wrapper for screen-blended border */
 .flow .image-frame {
 	width: var(--content-width-wide);
@@ -216,6 +203,38 @@ a:active {
 
 .eh-logo .logo-light {
 	fill: var(--color-background);
+}
+
+#main-title {
+	text-indent: -0.055rem;
+}
+
+#main-subtitle {
+	text-indent: -0.03rem;
+	margin-top: 0;
+	font-weight: 500;
+	font-size: var(--step-0);
+	line-height: var(--lh-body);
+}
+
+#solace-care-title {
+	text-indent: -0.07rem;
+}
+
+#apotekhjartat-title {
+	text-indent: -0rem;
+}
+
+#zalando-title {
+	text-indent: -0rem;
+}
+
+#mattecentrum-title {
+	text-indent: -0.04rem;
+}
+
+#thesis-title {
+	text-indent: -0rem;
 }
 
 .image-description {
