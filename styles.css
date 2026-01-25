@@ -195,14 +195,7 @@ a:active {
 	top: var(--space-sm);
 	left: var(--space-sm);
 	z-index: 10;
-}
-
-.eh-logo .logo-dark {
-	fill: var(--color-link);
-}
-
-.eh-logo .logo-light {
-	fill: var(--color-background);
+	color: var(--color-link);
 }
 
 #main-title {
