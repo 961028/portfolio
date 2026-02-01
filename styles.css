@@ -142,12 +142,23 @@ a:visited {
 	text-decoration: none;
 }
 
-.project-title:hover .link-text {
+a:hover .link-text {
 	text-decoration: underline;
 }
 
 a:active {
 	text-decoration: none;
+}
+
+.back-link-arrow {
+	margin-left: -1.5rem;
+	padding-right: 0.5rem;
+}
+
+.back-link-arrow-large {
+	font-size: var(--step-2);
+	line-height: var(--lh-display);
+	margin-left: -2.5rem;
 }
 
 /* Image frame wrapper for screen-blended border */
@@ -238,11 +249,6 @@ a:active {
 	display: block;
 }
 
-.back-link {
-	margin-top: var(--space-lg);
-	text-align: center;
-}
-
 /* https://jakearchibald.com/2024/view-transitions-handling-aspect-ratio-changes/ */
 
 @view-transition {
@@ -253,11 +259,6 @@ a:active {
 	display: inline-block;
 	width: fit-content;
 	transform-origin: left center;
-}
-
-.project-title.is-transitioning {
-	color: var(--color-text);
-	text-decoration: none;
 }
 
 :root::view-transition-group(*) {
