@@ -175,6 +175,13 @@ a:active {
 	margin-left: -2.5rem;
 }
 
+@media (max-width: 600px) {
+	.back-link-arrow-large {
+		font-size: var(--step-1);
+		margin-left: -2rem;
+	}
+}
+
 /* Image frame wrapper for screen-blended border */
 .flow .image-frame {
 	width: var(--content-width-wide);
