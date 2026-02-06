@@ -4,7 +4,7 @@
 	font-weight: 100 900;
 	font-display: swap;
 	font-style: normal;
-	font-optical-sizing: none;
+	font-optical-sizing: auto;
 }
 
 html {
@@ -22,7 +22,7 @@ html {
 	--font-family-base: Inter, Arial, system-ui, sans-serif;
 
 	/* Modular Scale */
-	--ratio: 1.414;
+	--ratio: 1.4142;
 
 	--step-0: 1rem;
 	--step-1: calc(var(--step-0) * var(--ratio));
@@ -222,6 +222,16 @@ a:active {
 	left: var(--space-sm);
 	z-index: 10;
 	color: var(--color-link);
+}
+
+#cheeky-emil {
+	display: block;
+	margin-top: var(--space-lg);
+	width: calc(var(--content-width-base) / 2);
+	height: auto;
+	pointer-events: none;
+	margin-bottom: calc(var(--space-lg) * -3);
+	position: relative;
 }
 
 #main-title {
