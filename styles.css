@@ -118,13 +118,23 @@ h1 {
 	margin-top: var(--space-xs);
 }
 
-/* Tighten space in lists */
+/* Tighten space before list items */
 .flow > ul,
 .flow > ol,
 .flow > dl {
 	margin-top: var(--space-xs);
 	padding-left: var(--space-md);
 	line-height: var(--lh-body);
+}
+
+/* Extra spece between list items */
+.flow li + li {
+	margin-top: var(--space-xs);
+}
+
+/* Remove extra space between list items */
+.flow .list-compact li + li {
+	margin-top: 0;
 }
 
 /* Extra space before headings */
