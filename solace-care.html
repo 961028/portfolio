@@ -67,22 +67,30 @@
 			<p>
 				Solace Care is a planning and coordination tool for people who
 				have recently lost someone. This redesign focuses on reducing
-				mental effort, integrating AI more deeply, and making shared
-				planning easier.
+				cognitive load, integrating AI more deeply into the task flow,
+				and making shared planning easier.
 			</p>
 
-			<div class="image-frame">
-				<img
-					src="images/solace-care/original-solace-care-checklist.png"
-					alt="Original Solace Care checklist showing task list grouped by the time period 'Under de första veckorna' and category filters"
-					loading="lazy"
-					width="2560"
-					height="1492" />
-			</div>
-			<small class="image-description">
-				Original checklist layout with time-based task grouping and
-				category filters.
-			</small>
+			<h2>Opportunities for improvement</h2>
+			<ul>
+				<li>
+					The original interface tries to do too much at once. The home
+					page presents task cards, AI entry points, and support content
+					side by side, forcing users to orient themselves before they can
+					act. For someone in the early days of grief, this kind of
+					decision-making is unnecessarily taxing.
+				</li>
+				<li>
+					The AI assistant — a central part of the platform's value — lives
+					on its own separate page, disconnected from the tasks it's meant
+					to help with.
+
+				</li>
+				<li>
+					Collaboration is limited: co-planners have no
+					way to communicate on the platform.
+				</li>
+			</ul>
 
 			<div class="image-frame">
 				<img
@@ -93,22 +101,37 @@
 					height="1492" />
 			</div>
 			<small class="image-description">
-				Original Solace Care home page with multiple entry points for
-				support and AI assistance.
+				The original home page with competing entry points for tasks,
+				support content, and AI assistance.
 			</small>
 
-			<h2>Opportunities for improvement</h2>
-			<ul>
-				<li>
-					The original interface presents too many competing elements
-					at once, increasing cognitive load.
-				</li>
-				<li>
-					AI assistance is key to the platform, but it is separate
-					from the primary task flow.
-				</li>
-				<li>Collaboration features are very limited.</li>
-			</ul>
+			<div class="image-frame">
+				<img
+					src="images/solace-care/original-solace-care-checklist.png"
+					alt="Original Solace Care checklist showing task list grouped by the time period 'Under de första veckorna' and category filters"
+					loading="lazy"
+					width="2560"
+					height="1492" />
+			</div>
+			<small class="image-description">
+				The original checklist with time-based grouping and category
+				filters.
+			</small>
+
+			<h2>Simplified navigation</h2>
+			<p>
+				The home page was removed entirely. The checklist is now the
+				primary entry point and the first thing users see when they open
+				the app. This eliminates an entire layer of navigation and puts
+				users directly in front of their tasks.
+			</p>
+			<p>
+				The checklist keeps the original timeline structure but adds a
+				new section for the very first days after a loss, when the need
+				for low cognitive load is most important. Each time period can be 
+				expanded or collapsed, letting users focus on what's relevant 
+				without being overwhelmed by everything that comes later.
+			</p>
 
 			<div class="image-frame">
 				<img
@@ -119,46 +142,47 @@
 					height="1362" />
 			</div>
 			<small class="image-description">
-				Redesigned checklist view with expanded sections for the first
-				days and weeks after a loss.
+				The redesigned checklist with expanded sections for the first
+				days and first weeks.
 			</small>
 
-			<h2>Redesigned checklist structure</h2>
+			<h2>Collaboration</h2>
 			<p>
-				The redesigned checklist keeps the original timeline structure
-				but adds a dedicated section for the first days after a loss.
-				The home page was removed to simplify navigation and make the
-				checklist the primary entry point.
+				End-of-life planning is rarely done alone, so the redesign adds
+				a shared notes panel to each checklist item, giving co-planners
+				a place to coordinate directly within the task they're working
+				on rather than switching to a separate messaging tool 
+				without context.
+			</p>
+
+			<p>
+				Similarly to the original design, users can also assign tasks to
+				themselves or co-planners. On the Checklist page, seen above, users 
+				can choose to hide all checklist-items which are not their responsibility.
 			</p>
 
 			<div class="image-frame">
 				<img
 					src="images/solace-care/checklistitem-page.png"
-					alt="Redesigned checklist item page showing task instructions, shared notes panel, and navigation controls"
+					alt="Redesigned checklist item page showing task instructions, shared notes panel, AI chat-box, AI suggestions, and navigation controls to reach the next and previous todo-list item"
 					loading="lazy"
 					width="1728"
-					height="1286" />
+					height="1430" />
 			</div>
 			<small class="image-description">
-				Checklist item layout combining task guidance, shared notes, and
-				in-context AI assistance.
+				A checklist item with task guidance, shared notes, and
+				AI assistance in a single view.
 			</small>
 
-			<h2>Collaboration and AI integration</h2>
+			<h2>AI integration</h2>
 			<p>
-				A shared notes panel was added to each checklist item to enable
-				in-context collaboration. This allows co-planners to communicate
-				directly within tasks instead of relying on external tools.
-			</p>
-			<p>
-				The AI assistant is now available as a persistent chat panel
-				across all pages. This replaces the previous separate view and
-				floating action button, enabling context-aware support inside
-				the active workspace.
-			</p>
-			<p>
-				The AI assistant was extended to reference not only articles and
-				checklist items, but also user-uploaded documents.
+				In the original design, the AI assistant lived on its own page,
+				separate from the tasks and content it was meant to support. The
+				first step was to bring it into the task flow: a persistent chat
+				panel now appears across all pages which is able to respond directly 
+				to the context the user is viewing. The assistant can reference checklist
+				items, support articles, and documents uploaded by the user or
+				their co-planners.
 			</p>
 
 			<div class="image-frame">
@@ -170,15 +194,25 @@
 					height="2196" />
 			</div>
 			<small class="image-description"
-				>Example of the AI assistant responding directly inside an
-				active checklist task.
+				>The AI assistant responding directly inside an active task.
 			</small>
 
-			<h2>Reducing cognitive load</h2>
 			<p>
-				The interface was simplified to focus on what users need most.
-				Unnecessary elements were removed to reduce distraction and make
-				the experience easier to navigate.
+				But a chat bar still puts the burden on the user to know what to
+				ask. For someone navigating grief, that blank input field is its
+				own form of cognitive load. The next step was to add contextual
+				action buttons at the end of each task. Structured prompts like
+				"Vad behöver jag tänka på juridiskt?" guide the user towards the 
+				most useful actions without requiring the user to formulate them. 
+				The chat remains available, but the buttons make the AI's capabilities
+				visible and accessible where they're most relevant.
+			</p>
+
+			<h2>Support content and documents</h2>
+			<p>
+				The library view organizes support content such as articles, 
+				guides, and recommended reading into browsable categories with an
+				newly added search feature.
 			</p>
 
 			<div class="image-frame">
@@ -190,16 +224,15 @@
 					height="1332" />
 			</div>
 			<small class="image-description">
-				Library view organizing support content, recommended reading,
-				and a new search feature.
+				The library view with categorized support content and search.
 			</small>
 
-			<h2>Document management</h2>
 			<p>
-				A dedicated documents page was added to provide an overview of
-				important files. Previously, users had to navigate to a
-				different area of the site to access documents uploaded by
-				co-planners or the deceased.
+				A dedicated documents page was added to give users an overview
+				of important files in one place. In the original design,
+				documents uploaded by co-planners or belonging to the deceased
+				were located in an area of the site which was difficult 
+				to discover and navigate to.
 			</p>
 
 			<div class="image-frame">
@@ -211,7 +244,7 @@
 					height="1587" />
 			</div>
 			<small class="image-description">
-				Documents overview with categorized files.
+				The documents overview with categorized files.
 			</small>
 
 			<p>
