@@ -239,6 +239,7 @@ a:active {
 	left: var(--space-sm);
 	z-index: 10;
 	color: var(--color-link);
+	overflow: visible;
 }
 
 #cheeky-emil {
