@@ -191,4 +191,20 @@
 			/>
 		</main>
 	</body>
+	<script>
+		window.addEventListener("load", function () {
+			var preloaded = [];
+			[
+				"images/solace-care/checklist-partially-open.png",
+				"images/apotekhjartat/hero.png",
+				"images/zalando/landing-1.png",
+				"images/mattecentrum/hero.png",
+				"images/workspace/hero.png",
+			].forEach(function (src) {
+				var img = new Image();
+				img.src = src;
+				preloaded.push(img);
+			});
+		});
+	</script>
 </html>
