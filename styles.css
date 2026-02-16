@@ -8,7 +8,7 @@
 }
 
 html {
-	font-size: clamp(16px, 0.5vw + 0.875rem, 18px);
+	font-size: clamp(16px, 0.5vw + 0.875rem, 20px);
 	cursor:
 		url("cursor/default@1x.svg") 0 0,
 		default;
@@ -35,6 +35,7 @@ html {
 	--lh-display: 1.15;
 
 	/* Spacing Scale */
+	--space-none: 0;
 	--space-xs: 0.5rem;
 	--space-sm: 1rem;
 	--space-md: 1.5rem;
@@ -134,7 +135,7 @@ h1 {
 
 /* Remove extra space between list items */
 .flow .list-compact li + li {
-	margin-top: 0;
+	margin-top: var(--space-none);
 }
 
 /* Extra space before headings */
@@ -207,7 +208,7 @@ a:active {
 
 /* Hero image: remove top margin on its frame */
 .flow .image-frame.hero {
-	margin-top: 0;
+	margin-top: var(--space-none);
 }
 
 /* Image inside the frame */
@@ -258,7 +259,7 @@ a:active {
 
 #main-subtitle {
 	text-indent: -0.03rem;
-	margin-top: 0;
+	margin-top: var(--space-none);
 	font-weight: 500;
 	font-size: var(--step-0);
 	line-height: var(--lh-body);
