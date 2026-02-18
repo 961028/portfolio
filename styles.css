@@ -24,6 +24,7 @@ html {
 	--color-cream: #f9f7f1;
 	--color-charcoal: #252523;
 	--color-cobalt: #2149b5;
+	--color-cobalt-light: #4468ca;
 	--color-charcoal-faded: #25252342;
 
 	/* Modular Scale */
@@ -71,6 +72,13 @@ html {
 
 	/* Component */
 	--logo-size: 2.5rem;
+}
+
+:root[data-theme="dark"] {
+	--color-background: var(--color-charcoal);
+	--color-text: var(--color-cream);
+	--color-accent: var(--color-cobalt-light);
+	--color-shadow: black;
 }
 
 /* Body sets defaults only - no layout */
@@ -240,6 +248,10 @@ a:active {
 	overflow: visible;
 }
 
+.eh-logo .logo-bg {
+	fill: var(--color-background);
+}
+
 #cheeky-emil {
 	display: block;
 	margin-top: var(--space-lg);
@@ -287,6 +299,37 @@ a:active {
 	opacity: var(--opacity-muted);
 	margin-top: var(--space-md);
 	display: block;
+}
+
+.theme-toggle {
+	position: fixed;
+	top: var(--space-sm);
+	right: var(--space-sm);
+	z-index: 10;
+	background: none;
+	border: none;
+	padding: 0.5rem;
+	color: var(--color-text);
+	cursor:
+		url("cursor/pointer@1x.svg") 6 0,
+		pointer;
+	cursor:
+		-webkit-image-set(url("cursor/pointer@2x.svg") 2x) 6 0,
+		pointer;
+	opacity: var(--opacity-muted);
+}
+
+.theme-toggle:hover {
+	opacity: 1;
+}
+
+:root[data-theme="light"] .theme-toggle .sun,
+:root:not([data-theme]) .theme-toggle .sun {
+	display: none;
+}
+
+:root[data-theme="dark"] .theme-toggle .moon {
+	display: none;
 }
 
 /* https://jakearchibald.com/2024/view-transitions-handling-aspect-ratio-changes/ */
