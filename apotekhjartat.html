@@ -37,7 +37,8 @@
 					viewBox="0 0 35 27"
 				>
 					<path
-						class="logo-bg" fill="#f9f7f1"
+						class="logo-bg"
+						fill="#f9f7f1"
 						d="M0 0h35v27H0z"
 					/>
 					<path
@@ -59,40 +60,30 @@
 			onclick="toggleTheme()"
 		>
 			<svg
-				class="theme-toggle-icon sun"
 				xmlns="http://www.w3.org/2000/svg"
-				width="20"
-				height="20"
-				viewBox="0 0 24 24"
+				width="32"
+				height="32"
 				fill="none"
-				stroke="currentColor"
-				stroke-width="2"
-				stroke-linecap="round"
-				stroke-linejoin="round"
+				viewBox="0 0 32 32"
+				class="theme-toggle sun"
 			>
-				<circle cx="12" cy="12" r="5" />
-				<line x1="12" y1="1" x2="12" y2="3" />
-				<line x1="12" y1="21" x2="12" y2="23" />
-				<line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-				<line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-				<line x1="1" y1="12" x2="3" y2="12" />
-				<line x1="21" y1="12" x2="23" y2="12" />
-				<line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-				<line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+				<path
+					fill="currentColor"
+					d="M9 13h2v6H9zm4-2V9h6v2zm0 12v-2h6v2zm8-10h2v6h-2zM3 15h4v2H3zm22 0h4v2h-4zM17 3v4h-2V3zm0 22v4h-2v-4zM7 7h2v2H7zm4 4h2v2h-2zm8 0h2v2h-2zm0 8h2v2h-2zm-8 0h2v2h-2zM5 5h2v2H5zm20 20h2v2h-2zm-2-2h2v2h-2zm2-16v2h-2V7zm2-2v2h-2V5zM7 25v2H5v-2zm2-2v2H7v-2z"
+				/>
 			</svg>
 			<svg
-				class="theme-toggle-icon moon"
 				xmlns="http://www.w3.org/2000/svg"
-				width="20"
-				height="20"
-				viewBox="0 0 24 24"
+				width="32"
+				height="32"
 				fill="none"
-				stroke="currentColor"
-				stroke-width="2"
-				stroke-linecap="round"
-				stroke-linejoin="round"
+				viewBox="0 0 32 32"
+				class="theme-toggle moon"
 			>
-				<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+				<path
+					fill="currentColor"
+					d="M24 10h2v10h-2zm-2-2h2v2h-2zm0 12h2v2h-2zm-8-4h2v2h-2zm-6 6h2v2H8zm12 0h2v2h-2zm0-16h2v2h-2zm-4 2h2v8h-2zm-6 16h10v2H10zm-2-4h6v-2H6v4h2zm8-14h4V4h-6v4h2z"
+				/>
 			</svg>
 		</button>
 		<main class="flow">
@@ -219,22 +210,5 @@
 			</p>
 		</main>
 	</body>
-	<script>
-		function toggleTheme() {
-			var current =
-				document.documentElement.getAttribute("data-theme");
-			var next = current === "dark" ? "light" : "dark";
-			document.documentElement.setAttribute("data-theme", next);
-			localStorage.setItem("theme", next);
-		}
-		window.addEventListener("pageshow", function (event) {
-			if (event.persisted) {
-				var theme = localStorage.getItem("theme") || "light";
-				document.documentElement.setAttribute(
-					"data-theme",
-					theme
-				);
-			}
-		});
-	</script>
+	<script src="theme.js"></script>
 </html>

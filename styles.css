@@ -71,7 +71,8 @@ html {
 	--content-width-wide: 60ch;
 
 	/* Component */
-	--logo-size: 2.5rem;
+	--logo-height: 2rem;
+	--theme-toggle-height: 2rem;
 }
 
 :root[data-theme="dark"] {
@@ -236,22 +237,6 @@ a:active {
 	pointer-events: none;
 }
 
-.eh-logo {
-	display: block;
-	width: var(--logo-size);
-	height: auto;
-	position: fixed;
-	top: var(--space-sm);
-	left: var(--space-sm);
-	z-index: 10;
-	color: var(--color-accent);
-	overflow: visible;
-}
-
-.eh-logo .logo-bg {
-	fill: var(--color-background);
-}
-
 #cheeky-emil {
 	display: block;
 	margin-top: var(--space-lg);
@@ -301,7 +286,26 @@ a:active {
 	display: block;
 }
 
+.eh-logo {
+	display: block;
+	width: auto;
+	height: var(--logo-height);
+	position: fixed;
+	top: var(--space-sm);
+	left: var(--space-sm);
+	z-index: 10;
+	color: var(--color-accent);
+	overflow: visible;
+}
+
+.eh-logo .logo-bg {
+	fill: var(--color-background);
+}
+
 .theme-toggle {
+	display: block;
+	width: auto;
+	height: var(--theme-toggle-height);
 	position: fixed;
 	top: var(--space-sm);
 	right: var(--space-sm);
