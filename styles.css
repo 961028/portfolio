@@ -345,6 +345,14 @@ a:active {
 	display: none;
 }
 
+:root[data-font-scale="large"] .font-size-toggle .plus {
+	display: none;
+}
+
+:root:not([data-font-scale]) .font-size-toggle .minus {
+	display: none;
+}
+
 /* https://jakearchibald.com/2024/view-transitions-handling-aspect-ratio-changes/ */
 
 @view-transition {
