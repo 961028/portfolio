@@ -1,12 +1,12 @@
 function toggleTheme() {
-	var current = document.documentElement.getAttribute("data-theme");
-	var next = current === "dark" ? "light" : "dark";
+	const current = document.documentElement.getAttribute("data-theme");
+	const next = current === "dark" ? "light" : "dark";
 	document.documentElement.setAttribute("data-theme", next);
 	localStorage.setItem("theme", next);
 }
 
 function toggleFontSize() {
-	var current = document.documentElement.getAttribute("data-font-scale");
+	const current = document.documentElement.getAttribute("data-font-scale");
 	if (current === "large") {
 		document.documentElement.removeAttribute("data-font-scale");
 		document.documentElement.style.removeProperty("--font-scale");
@@ -18,12 +18,12 @@ function toggleFontSize() {
 	}
 }
 
-window.addEventListener("pageshow", function (event) {
+window.addEventListener("pageshow", (event) => {
 	if (event.persisted) {
-		var theme = localStorage.getItem("theme") || "light";
+		const theme = localStorage.getItem("theme") || "light";
 		document.documentElement.setAttribute("data-theme", theme);
 
-		var fontScale = localStorage.getItem("fontScale");
+		const fontScale = localStorage.getItem("fontScale");
 		if (fontScale === "large") {
 			document.documentElement.setAttribute("data-font-scale", "large");
 			document.documentElement.style.setProperty("--font-scale", "1.15");
@@ -32,4 +32,13 @@ window.addEventListener("pageshow", function (event) {
 			document.documentElement.style.removeProperty("--font-scale");
 		}
 	}
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+	document
+		.querySelector(".theme-toggle")
+		?.addEventListener("click", toggleTheme);
+	document
+		.querySelector(".font-size-toggle")
+		?.addEventListener("click", toggleFontSize);
 });

@@ -16,8 +16,14 @@
 			const theme = localStorage.getItem("theme") || "light";
 			document.documentElement.setAttribute("data-theme", theme);
 			if (localStorage.getItem("fontScale") === "large") {
-				document.documentElement.setAttribute("data-font-scale", "large");
-				document.documentElement.style.setProperty("--font-scale", "1.15");
+				document.documentElement.setAttribute(
+					"data-font-scale",
+					"large",
+				);
+				document.documentElement.style.setProperty(
+					"--font-scale",
+					"1.15",
+				);
 			}
 		</script>
 		<link
@@ -41,7 +47,8 @@
 					viewBox="0 0 35 27"
 				>
 					<path
-						class="logo-bg" fill="#f9f7f1"
+						class="logo-bg"
+						fill="#f9f7f1"
 						d="M0 0h35v27H0z"
 					/>
 					<path
@@ -61,7 +68,6 @@
 			<button
 				class="font-size-toggle"
 				aria-label="Toggle large font size"
-				onclick="toggleFontSize()"
 			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +89,6 @@
 			<button
 				class="theme-toggle"
 				aria-label="Toggle dark mode"
-				onclick="toggleTheme()"
 			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -125,7 +130,6 @@
 				/>
 			</div>
 
-			</a>
 			<h1
 				class="project-title"
 				style="view-transition-name: zalando"
@@ -206,14 +210,12 @@
 					<span
 						class="back-link-arrow"
 						aria-hidden="true"
-						focusable="false"
 						><-</span
 					><span class="link-text">Back to projects</span>
 				</a>
 			</p>
-
-			<script src="zalando-carousel.js"></script>
 		</main>
+		<script src="zalando-carousel.js"></script>
+		<script src="theme.js"></script>
 	</body>
-	<script src="theme.js"></script>
 </html>

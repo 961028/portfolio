@@ -7,6 +7,10 @@
 			content="width=device-width, initial-scale=1.0"
 		/>
 		<title>Emil Holmsten - Portfolio</title>
+		<meta
+			name="description"
+			content="Portfolio of Emil Holmsten — UX Designer, Strategist, and Engineer. Projects in redesign, concept development, and prototyping."
+		/>
 		<link
 			rel="icon"
 			type="image/svg+xml"
@@ -63,7 +67,6 @@
 			<button
 				class="font-size-toggle"
 				aria-label="Toggle large font size"
-				onclick="toggleFontSize()"
 			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -85,7 +88,6 @@
 			<button
 				class="theme-toggle"
 				aria-label="Toggle dark mode"
-				onclick="toggleTheme()"
 			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -257,22 +259,22 @@
 				height="1024"
 			/>
 		</main>
-	</body>
-	<script src="theme.js"></script>
-	<script>
-		window.addEventListener("load", function () {
-			var preloaded = [];
-			[
-				"images/solace-care/checklist-partially-open.png",
-				"images/apotekhjartat/hero.png",
-				"images/zalando/landing-1.png",
-				"images/mattecentrum/hero.png",
-				"images/workspace/hero.png",
-			].forEach(function (src) {
-				var img = new Image();
-				img.src = src;
-				preloaded.push(img);
+		<script src="theme.js"></script>
+		<script>
+			window.addEventListener("load", () => {
+				const preloaded = [];
+				[
+					"images/solace-care/checklist-partially-open.png",
+					"images/apotekhjartat/hero.png",
+					"images/zalando/landing-1.png",
+					"images/mattecentrum/hero.png",
+					"images/workspace/hero.png",
+				].forEach((src) => {
+					const img = new Image();
+					img.src = src;
+					preloaded.push(img);
+				});
 			});
-		});
-	</script>
+		</script>
+	</body>
 </html>
