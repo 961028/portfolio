@@ -15,6 +15,10 @@
 		<script>
 			const theme = localStorage.getItem("theme") || "light";
 			document.documentElement.setAttribute("data-theme", theme);
+			if (localStorage.getItem("fontScale") === "large") {
+				document.documentElement.setAttribute("data-font-scale", "large");
+				document.documentElement.style.setProperty("--font-scale", "1.15");
+			}
 		</script>
 		<link
 			rel="stylesheet"
@@ -53,38 +57,62 @@
 				</svg>
 			</a>
 		</nav>
-		<button
-			class="theme-toggle"
-			aria-label="Toggle dark mode"
-			onclick="toggleTheme()"
-		>
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				width="32"
-				height="32"
-				fill="none"
-				viewBox="0 0 32 32"
-				class="theme-toggle sun"
+		<div class="toolbar">
+			<button
+				class="font-size-toggle"
+				aria-label="Toggle large font size"
+				onclick="toggleFontSize()"
 			>
-				<path
-					fill="currentColor"
-					d="M9 13h2v6H9zm4-2V9h6v2zm0 12v-2h6v2zm8-10h2v6h-2zM3 15h4v2H3zm22 0h4v2h-4zM17 3v4h-2V3zm0 22v4h-2v-4zM7 7h2v2H7zm4 4h2v2h-2zm8 0h2v2h-2zm0 8h2v2h-2zm-8 0h2v2h-2zM5 5h2v2H5zm20 20h2v2h-2zm-2-2h2v2h-2zm2-16v2h-2V7zm2-2v2h-2V5zM7 25v2H5v-2zm2-2v2H7v-2z"
-				/>
-			</svg>
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				width="32"
-				height="32"
-				fill="none"
-				viewBox="0 0 32 32"
-				class="theme-toggle moon"
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="32"
+					height="32"
+					fill="none"
+					viewBox="0 0 32 32"
+				>
+					<path
+						fill="currentColor"
+						d="M9 13h2v10H9zm-5 0v-2h12v2zm15-6h2v16h-2zm-7 0V5h16v2zm0 0h2v2h-2zm14 0h2v2h-2zm-12 6h2v2h-2zM7 23h6v2H7zm10 0h6v2h-6zM4 13h2v2H4zm22-2h2v8h-2z"
+					/>
+					<path
+						fill="currentColor"
+						d="M23 16v-2h8v2z"
+					/>
+				</svg>
+			</button>
+			<button
+				class="theme-toggle"
+				aria-label="Toggle dark mode"
+				onclick="toggleTheme()"
 			>
-				<path
-					fill="currentColor"
-					d="M24 10h2v10h-2zm-2-2h2v2h-2zm0 12h2v2h-2zm-8-4h2v2h-2zm-6 6h2v2H8zm12 0h2v2h-2zm0-16h2v2h-2zm-4 2h2v8h-2zm-6 16h10v2H10zm-2-4h6v-2H6v4h2zm8-14h4V4h-6v4h2z"
-				/>
-			</svg>
-		</button>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="32"
+					height="32"
+					fill="none"
+					viewBox="0 0 32 32"
+					class="theme-toggle sun"
+				>
+					<path
+						fill="currentColor"
+						d="M9 13h2v6H9zm4-2V9h6v2zm0 12v-2h6v2zm8-10h2v6h-2zM3 15h4v2H3zm22 0h4v2h-4zM17 3v4h-2V3zm0 22v4h-2v-4zM7 7h2v2H7zm4 4h2v2h-2zm8 0h2v2h-2zm0 8h2v2h-2zm-8 0h2v2h-2zM5 5h2v2H5zm20 20h2v2h-2zm-2-2h2v2h-2zm2-16v2h-2V7zm2-2v2h-2V5zM7 25v2H5v-2zm2-2v2H7v-2z"
+					/>
+				</svg>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="32"
+					height="32"
+					fill="none"
+					viewBox="0 0 32 32"
+					class="theme-toggle moon"
+				>
+					<path
+						fill="currentColor"
+						d="M24 10h2v10h-2zm-2-2h2v2h-2zm0 12h2v2h-2zm-8-4h2v2h-2zm-6 6h2v2H8zm12 0h2v2h-2zm0-16h2v2h-2zm-4 2h2v8h-2zm-6 16h10v2H10zm-2-4h6v-2H6v4h2zm8-14h4V4h-6v4h2z"
+					/>
+				</svg>
+			</button>
+		</div>
 		<main class="flow">
 			<div class="image-frame hero">
 				<img

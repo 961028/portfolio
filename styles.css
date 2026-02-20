@@ -8,7 +8,7 @@
 }
 
 html {
-	font-size: clamp(16px, 0.5vw + 0.875rem, 20px);
+	font-size: calc(clamp(16px, 0.5vw + 0.875rem, 20px) * var(--font-scale, 1));
 	cursor:
 		url("cursor/default@1x.svg") 0 0,
 		default;
@@ -72,7 +72,7 @@ html {
 
 	/* Component */
 	--logo-height: 2rem;
-	--theme-toggle-height: 2rem;
+	--theme-toolbar-height: 2rem;
 }
 
 :root[data-theme="dark"] {
@@ -302,17 +302,19 @@ a:active {
 	fill: var(--color-background);
 }
 
-.theme-toggle {
-	display: block;
-	width: auto;
-	height: var(--theme-toggle-height);
+.toolbar {
 	position: fixed;
 	top: var(--space-sm);
 	right: var(--space-sm);
 	z-index: 10;
+	display: flex;
+	align-items: center;
+}
+
+.toolbar button {
+	display: block;
 	background: none;
 	border: none;
-	padding: 0.5rem;
 	color: var(--color-text);
 	cursor:
 		url("cursor/pointer@1x.svg") 6 0,
@@ -321,9 +323,11 @@ a:active {
 		-webkit-image-set(url("cursor/pointer@2x.svg") 2x) 6 0,
 		pointer;
 	opacity: var(--opacity-muted);
+	width: auto;
+	height: var(--theme-toolbar-height);
 }
 
-.theme-toggle:hover {
+.toolbar button:hover {
 	opacity: 1;
 }
 
