@@ -13,7 +13,7 @@ function toggleFontSize() {
 		localStorage.removeItem("fontScale");
 	} else {
 		document.documentElement.setAttribute("data-font-scale", "large");
-		document.documentElement.style.setProperty("--font-scale", "1.15");
+		document.documentElement.style.setProperty("--font-scale", "1.4");
 		localStorage.setItem("fontScale", "large");
 	}
 }
